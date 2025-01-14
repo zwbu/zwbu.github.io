@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Excel 表格显示</title>
+<script src="https://cdn.sheetjs.com/xlsx-0.19.3/package/xlsx.full.min.js"></script>
+</head>
+<body>
+    <input type="files" id="papertable" accept=".xlsx, .xls">
+    <div id="tableContainer"></div>
+
+    <script>
+    const excelFile = document.getElementById('excelFile');
+    const tableContainer = document.getElementById('tableContainer');
+
+    excelFile.addEventListener('change', (event) => {
+        const file = event.target.files[0];
+        const reader = new FileReader();
+
+        reader.onload = (e) => {
+            const data = new Uint8Array(e.target.result);
+            const workbook = XLSX.read(data, {type: 'array'});
+            const sheetName = workbook.SheetNames[0];
+            const worksheet = workbook.Sheets[sheetName];
+            const jsonData = XLSX.utils.sheet_to_json(worksheet, {header: 1});
+
+            let tableHTML = '<table>';
+            for (let i = 0; i < jsonData.length; i++) {
+                tableHTML += '<tr>';
+                for (let j = 0; j < jsonData[i].length; j++) {
+                    tableHTML += '<td>' + jsonData[i][j] + '</td>';
+                }
+                tableHTML += '</tr>';
+            }
+            tableHTML += '</table>';
+            tableContainer.innerHTML = tableHTML;
+        };
+
+        reader.readAsArrayBuffer(file);
+    });
+    </script>
+</body>
+</html>
