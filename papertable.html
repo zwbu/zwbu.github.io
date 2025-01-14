@@ -81,6 +81,7 @@ fetch('files/paperdata.json') // 替换为你的 JSON 文件路径
     const table = document.getElementById('myTable');
     const thead = table.querySelector('thead tr');
     const tbody = table.querySelector('tbody');
+    const textContainer = document.getElementById('textContainer');
 
     if (data.length > 0) {
         // 创建其他表头
@@ -116,6 +117,14 @@ fetch('files/paperdata.json') // 替换为你的 JSON 文件路径
                 }
                 row.appendChild(cell);
             });
+            
+            data.forEach(item => {
+                const p = document.createElement('p');
+                // 使用正则表达式替换 **文本** 为 <strong>文本 </strong>
+                p.innerHTML = item.text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                textContainer.appendChild(p);
+            });
+            
             tbody.appendChild(row);
         });
     } else {
