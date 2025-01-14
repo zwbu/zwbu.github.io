@@ -78,41 +78,55 @@
     <header>
         <h1>Yu Zhang's paper table</h1>
     </header>
-    <div class="container">
-        <table>
-            <caption><strong>《机械制造基础》课程信息</strong></caption>
-            <thead>
-                <tr>
-                    <th>No.</th>
-                    <th>Authors</th>
-                    <th>Year</th>
-                    <th>Title</th>
-                    <th>Journals</th>
-                    <th>Volume</th>
-                    <th>Issue</th>
-                    <th>Page</th>
-                    <th>IF</th>
-                    <th>Citations</th>
-                    <th>CAS '23</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td></td>
-                    <td><strong>Zhang, Y.</strong>, Gao, S., Duan, X., Zhu, K.</td>
-                    <td>2025</td>
-                    <td><a href="https://www.sciencedirect.com/science/article/abs/pii/S0043164825000080">
-                    A visual analytical method for evaluating tool flank wear volumes of micro-milling cutters with AKAZE features matching: a preliminary study</a></td>
-                    <td>Wear</td>
-                    <td>/</td>
-                    <td>/</td>
-                    <td>205739</td>
-                    <td><a href="https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=8087">5.3</a></td>
-                    <td>TBA</td>
-                    <td>1</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <table id="myTable">
+        <thead>
+            <tr>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+<script>
+fetch('files/paperdata.json') // 替换为你的 JSON 文件路径
+  .then(response => response.json())
+  .then(data => {
+    const table = document.getElementById('myTable');
+    const thead = table.querySelector('thead tr');
+    const tbody = table.querySelector('tbody');
+
+    if (data.length > 0) {
+        // 创建表头
+        const headers = Object.keys(data[0]);
+        headers.forEach(headerText => {
+            const th = document.createElement('th');
+            th.textContent = headerText;
+            thead.appendChild(th);
+        });
+
+        // 创建表格行
+        data.forEach(item => {
+            const row = document.createElement('tr');
+            headers.forEach(header => {
+                const cell = document.createElement('td');
+                cell.textContent = item[header];
+                row.appendChild(cell);
+            });
+            tbody.appendChild(row);
+        });
+    } else {
+        const noDataMessage = document.createElement('p');
+        noDataMessage.textContent = "JSON 文件中没有数据。";
+        document.body.appendChild(noDataMessage);
+    }
+  })
+    
+  .catch(error => {
+    console.error('Error fetching JSON:', error);
+      const errorMessage = document.createElement('p');
+      errorMessage.textContent = `加载 JSON 数据出错：${error}`;
+      document.body.appendChild(errorMessage);
+  });
+</script>
 </body>
 </html>
