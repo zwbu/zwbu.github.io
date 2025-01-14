@@ -1,6 +1,246 @@
-[
+[ 
   {
-    "Authors": "Zhu, K., <strong>Zhang, Y.</strong>",
+    "Authors": "Zhang, Y.*, Gao, S., Duan, X., Zhu, K.",
+    "Year": 2025,
+    "Title": "A visual analytical method for evaluating tool flank wear volumes of micro-milling cutters with AKAZE features matching: A preliminary study",
+    "Journals": "Wear",
+    "Volume": "TBA",
+    "Issue": "TBA",
+    "Page": "205739",
+    "IF": 5.3,
+    "Citations": "TBA",
+    "JCR '23": 1,
+    "Article Link": "https://www.sciencedirect.com/science/article/abs/pii/S0043164825000080",
+    "IF Link": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=8087"
+  },
+
+  {
+    "Authors": "Zhang, Y.*, Duan, X., Zhu, K.",
+    "Year": 2025,
+    "Title": "Cutting force and state identification in high-speed milling: A semi-analytical multi-dimensional approach",
+    "Journals": "Chinese Journal of Mechanical Engineering",
+    "Volume": "TBA",
+    "Issue": "TBA",
+    "Page": "TBA",
+    "IF": 4.6,
+    "Citations": "TBA",
+    "JCR '23": 2,
+    "Article Link": "https://cjme.springeropen.com/",
+    "IF Link": "https://letpub.com.cn/index.php?journalid=1714&page=journalapp&view=detail"
+  },
+
+  {
+    "Authors": "Gao, S., Duan, X., Zhu, K., Zhang, Y.*",
+    "Year": 2024,
+    "Title": "Investigation of the tool flank wear influence on cutter-workpiece engagement and cutting force in micro milling processes",
+    "Journals": "Mechanical Systems and Signal Processing",
+    "Volume": 209,
+    "Issue": null,
+    "Page": "111104",
+    "IF": 7.9,
+    "Citations": 4,
+    "JCR '23": 1,
+    "Article Link": "https://www.sciencedirect.com/science/article/abs/pii/S0888327024000025",
+    "IF Link": "https://www.letpub.com.cn/index.php?journalid=5762&page=journalapp&view=detail"
+  },
+
+  {
+    "Authors": "Gao, S., Duan, X., Zhu, K., Zhang, Y.*",
+    "Year": 2024,
+    "Title": "Influence of tool flank wear considering tool edge radius on instantaneous uncut chip thickness and cutting force in micro-end milling",
+    "Journals": "The International Journal of Advanced Manufacturing Technology",
+    "Volume": 133,
+    "Issue": null,
+    "Page": "1639–1650",
+    "IF": 2.9,
+    "Citations": null,
+    "JCR '23": 3,
+    "Article Link": "https://link.springer.com/article/10.1007/s00170-024-13794-3",
+    "IF Link": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=3652"
+  },
+
+  {
+    "Authors": "Duan, X., Su, F., Gao, S., Zhu, K., Deng, B., Zhang, Y.*",
+    "Year": 2024,
+    "Title": "Relationship between energy efficiency and surface morphologies in micro-milling of SLM Inconel 718",
+    "Journals": "Journal of Materials Research and Technology",
+    "Volume": 31,
+    "Issue": null,
+    "Page": "1473-1482",
+    "IF": 6.2,
+    "Citations": null,
+    "JCR '23": 1,
+    "Article Link": "https://www.sciencedirect.com/science/article/pii/S2238785424014637",
+    "IF Link": "https://www.letpub.com.cn/index.php?journalid=10243&page=journalapp&view=detail"
+  },
+
+  {
+    "Authors": "李刚, 张宇*, 李斯, 朱锟鹏",
+    "Year": 2023,
+    "Title": "基于运动学的高速高精密铣削力建模：综合模型与试验",
+    "Journals": "航空学报",
+    "Volume": 44,
+    "Issue": 8,
+    "Page": "427261",
+    "IF": null,
+    "Citations": null,
+    "JCR '23": null,
+    "Article Link": "https://hkxb.buaa.edu.cn/CN/10.7527/S1000-6893.2022.27261",
+    "IF Link": null
+  },
+
+  {
+    "Authors": "Gao, S., Duan, X., Zhu, K., Zhang, Y.*",
+    "Year": 2022,
+    "Title": "Generic Cutting Force Modeling with Comprehensively Considering Tool Edge Radius, Tool Flank Wear and Tool Runout in Micro-End Milling",
+    "Journals": "Micromachines",
+    "Volume": 13,
+    "Issue": 11,
+    "Page": "1805",
+    "IF": 3.0,
+    "Citations": null,
+    "JCR '23": 3,
+    "Article Link": "https://www.mdpi.com/2072-666X/13/11/1805",
+    "IF Link": "https://www.letpub.com.cn/index.php?journalid=9588&page=journalapp&view=detail"
+  },
+
+   {
+    "Authors": "李鑫, 张宇*, 朱锟鹏",
+    "Year": 2022,
+    "Title": "基于S变换时频特征的刀具磨损监测方法",
+    "Journals": "组合机床与自动化加工技术",
+    "Volume": null,
+    "Issue": 10,
+    "Page": "88-91",
+    "IF": null,
+    "Citations": null,
+    "JCR '23": null,
+    "Article Link": "http://zhjcz.com.cn/index/catalog/info?id=53",
+    "IF Link": null
+  },
+
+  {
+    "Authors": "Zhang, Y.*, Zhu, K.",
+    "Year": 2022,
+    "Title": "Tool wear estimation with a data-driven physics coupling approach",
+    "Journals": "Manufacturing Letters",
+    "Volume": 34,
+    "Issue": null,
+    "Page": "38-42",
+    "IF": 1.9,
+    "Citations": null,
+    "JCR '23": null,
+    "Article Link": "https://www.letpub.com.cn/index.php?journalid=24809&page=journalapp&view=detail",
+    "IF Link": null
+  },
+
+  {
+    "Authors": "Guo, H., Zhang, Y.*, Zhu, K.",
+    "Year": 2022,
+    "Title": "Interpretable Deep Learning Approach for Tool Wear Monitoring in High-speed Milling",
+    "Journals": "Computers in Industry",
+    "Volume": 138,
+    "Issue": null,
+    "Page": "103638",
+    "IF": 8.2,
+    "Citations": 38,
+    "JCR '23": 1,
+    "Article Link": "https://www.sciencedirect.com/science/article/abs/pii/S2213846322001924",
+    "IF Link": "https://www.letpub.com.cn/index.php?journalid=2017&page=journalapp&view=detail"
+  },
+
+  {
+    "Authors": "Zhang, Y.*, Li, G., Zhu, K.",
+    "Year": 2021,
+    "Title": "A novel approach to estimating runout effect in high-speed milling",
+    "Journals": "The 5th International Conference on Robotics, Control and Automation (ICRCA 2021)",
+    "Volume": null,
+    "Issue": null,
+    "Page": "54-57",
+    "IF": null,
+    "Citations": null,
+    "JCR '23": null,
+    "Article Link": "https://dl.acm.org/doi/abs/10.1145/3471985.3472373",
+    "IF Link": null
+  },
+
+  {
+    "Authors": "Zhang, Y.*, Zhu, K., Duan, X., Li, S.",
+    "Year": 2021,
+    "Title": "Tool wear estimation and life prognostics in milling: Model extension and generalization",
+    "Journals": "Mechanical Systems and Signal Processing",
+    "Volume": 155,
+    "Issue": null,
+    "Page": "107617",
+    "IF": 7.9,
+    "Citations": 53,
+    "JCR '23": 1,
+    "Article Link": "https://www.sciencedirect.com/science/article/abs/pii/S0888327021000121",
+    "IF Link": "https://www.letpub.com.cn/index.php?journalid=5762&page=journalapp&view=detail"
+  },
+
+  {
+    "Authors": "Zhang, Y.*, Li, S., Zhu, K.",
+    "Year": 2020,
+    "Title": "Generic instantaneous force modeling and comprehensive real engagement identification in micro-milling",
+    "Journals": "International Journal of Mechanical Sciences",
+    "Volume": 176,
+    "Issue": null,
+    "Page": "105504",
+    "IF": 7.1,
+    "Citations": 24,
+    "JCR '23": 1,
+    "Article Link": "https://www.sciencedirect.com/science/article/abs/pii/S0020740319328668",
+    "IF Link": "https://www.letpub.com.cn/index.php?journalid=3795&page=journalapp&view=detail"
+  },
+
+  {
+    "Authors": "Zhu, K., Li, G., Zhang, Y.*",
+    "Year": 2019,
+    "Title": "Big data oriented smart tool condition monitoring system",
+    "Journals": "IEEE Transactions on Industrial Informatics",
+    "Volume": 16,
+    "Issue": 6,
+    "Page": "4007-4016",
+    "IF": 11.7,
+    "Citations": 87,
+    "JCR '23": 1,
+    "Article Link": "https://ieeexplore.ieee.org/document/8918449/",
+    "IF Link": "https://www.letpub.com.cn/index.php?journalid=3392&page=journalapp&view=detail"
+  },
+
+  {
+    "Authors": "Zhu, K., Zhang, Y.*",
+    "Year": 2019,
+    "Title": "A generic tool wear model and its application to force modeling and wear monitoring in high speed milling",
+    "Journals": "Mechanical Systems and Signal Processing",
+    "Volume": 115,
+    "Issue": null,
+    "Page": "147-161",
+    "IF": 7.9,
+    "Citations": 134,
+    "JCR '23": 1,
+    "Article Link": "https://www.sciencedirect.com/science/article/abs/pii/S0888327018303042",
+    "IF Link": "https://www.letpub.com.cn/index.php?journalid=5762&page=journalapp&view=detail"
+  },
+
+  {
+    "Authors": "Zhu, K., Zhang, Y.*",
+    "Year": 2018,
+    "Title": "A cyber-physical production system framework of smart CNC machining monitoring system",
+    "Journals": "IEEE/ASME Transactions on Mechatronics",
+    "Volume": 23,
+    "Issue": 6,
+    "Page": "2579-2586",
+    "IF": 6.1,
+    "Citations": 55,
+    "JCR '23": 1,
+    "Article Link": "https://ieeexplore.ieee.org/abstract/document/8356631",
+    "IF Link": "https://www.letpub.com.cn/index.php?journalid=3433&page=journalapp&view=detail"
+  },
+  
+  {
+    "Authors": "Zhu, K., Zhang, Y.*",
     "Year": 2017,
     "Title": "Modeling of the instantaneous milling force per tooth with tool run-out effect in high speed ball-end milling",
     "Journals": "International Journal of Machine Tools and Manufacture",
@@ -15,7 +255,7 @@
   },
   
   {
-    "Authors": "王贡献, <strong>张宇</strong>, 胡志辉, 周鹏中",
+    "Authors": "王贡献, 张宇*, 胡志辉, 周鹏中",
     "Year": 2015,
     "Title": "筒式磁流变液联轴器的机理模型及特征解",
     "Journals": "华南理工大学学报: 自然科学版",
