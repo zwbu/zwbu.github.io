@@ -108,7 +108,7 @@ fetch('files/paperdata.json') // 替换为你的 JSON 文件路径
                 if ((header === "Article Link" || header === "IF Link") && cellValue) { // 假设JSON中"链接"列的值是url
                     const a = document.createElement('a');
                     a.href = cellValue;
-                    a.textContent = "点击访问"; // 或使用 cellValue 作为链接文本
+                    a.textContent = "访问"; // 或使用 cellValue 作为链接文本
                     a.target = "_blank"; // 在新标签页中打开
                     cell.appendChild(a);
                 } else {
