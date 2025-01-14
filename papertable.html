@@ -102,7 +102,18 @@ fetch('files/paperdata.json') // 替换为你的 JSON 文件路径
 
             headers.forEach(header => {
                 const cell = document.createElement('td');
-                cell.textContent = item[header];
+                let cellValue = item[header];
+        
+                // 判断是否需要添加链接，例如对 "链接" 列添加链接
+                if ((header === "Article link" || "IF link") && cellValue) { // 假设JSON中"链接"列的值是url
+                    const a = document.createElement('a');
+                    a.href = cellValue;
+                    a.textContent = "点击访问"; // 或使用 cellValue 作为链接文本
+                    a.target = "_blank"; // 在新标签页中打开
+                    cell.appendChild(a);
+                } else {
+                    cell.textContent = cellValue;
+                }
                 row.appendChild(cell);
             });
             tbody.appendChild(row);
