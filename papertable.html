@@ -21,20 +21,6 @@
         header h1 {
             margin: 0;
         }
-        
-        /* 初始化计数器 */
-        tbody {
-          counter-reset: rowNumber;
-        }
-        
-        /* 在每个表格行之前递增计数器并显示 */
-        tr:not(thead tr)::before { /*排除表头*/
-          counter-increment: rowNumber;
-          content: counter(rowNumber);
-          display: table-cell; /* 使序号显示在单独的单元格中 */
-          padding-right: 8px; /* 增加一些右侧内边距 */
-          text-align: right;
-        }
 
         table {
             width: 90%;
