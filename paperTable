@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yu Zhang's paper table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        table {
+            width: 90%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+        }
+
+        /* 奇数行背景色 */
+        tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+
+        /* 偶数行背景色 */
+        tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+
+        th {
+            border: 1.5px solid #888;
+            text-align: left;
+            padding: 10px 10px;
+            background-color: #dbacfa;
+        }
+
+        td {
+            border: 1.5px solid #888;
+            text-align: left;
+            padding: 10px 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+        }
+        
+        /* 初始化计数器 */
+        tbody {
+          counter-reset: rowNumber;
+        }
+        
+        /* 在每个表格行之前递增计数器并显示 */
+        tr:not(thead tr)::before { /*排除表头*/
+          counter-increment: rowNumber;
+          content: counter(rowNumber);
+          display: table-cell; /* 使序号显示在单独的单元格中 */
+          padding-right: 8px; /* 增加一些右侧内边距 */
+          text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Yu Zhang's paper table</h1>
+    </header>
+    <div class="container">
+        <table>
+            <caption><strong>《机械制造基础》课程信息</strong></caption>
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Authors</th>
+                    <th>Year</th>
+                    <th>Title</th>
+                    <th>Journals</th>
+                    <th>Volume</th>
+                    <th>Issue</th>
+                    <th>Page</th>
+                    <th>IF</th>
+                    <th>Citations</th>
+                    <th>CAS '23</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td><strong>Zhang, Y.</strong>, Gao, S., Duan, X., Zhu, K.</td>
+                    <td>2025</td>
+                    <td><a href="https://www.sciencedirect.com/science/article/abs/pii/S0043164825000080">
+                    A visual analytical method for evaluating tool flank wear volumes of micro-milling cutters with AKAZE features matching: a preliminary study</a></td>
+                    <td>Wear</td>
+                    <td>/</td>
+                    <td>/</td>
+                    <td>205739</td>
+                    <td><a href="https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=8087">5.3</a></td>
+                    <td>TBA</td>
+                    <td>1</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
