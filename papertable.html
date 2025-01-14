@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yu Zhang's paper table</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -52,14 +53,12 @@
             position: sticky; /* 固定表头 */
             top: 0;
             z-index: 1;       /* 防止表头被内容遮挡 */
-            cursor: pointer; /* 使表头看起来可点击 */
         }
 
         td {
             border: 1.5px solid #888;
             text-align: left;
             padding: 10px 10px;
-            cursor: pointer; /* 使表头看起来可点击 */
         }
 
         footer {
@@ -141,54 +140,16 @@ fetch('files/paperdata.json') // 替换为你的 JSON 文件路径
       errorMessage.textContent = `加载 JSON 数据出错：${error}`;
       document.body.appendChild(errorMessage);
   });
+</script>
 
 // 排序功能
-function sortTable(n) {
-  let table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-  table = document.getElementsByTagName("TABLE")[0];
-  switching = true;
-  // 设置排序方向为升序
-  dir = "asc";
-  /* 开始循环，直到没有需要交换的元素 */
-  while (switching) {
-    switching = false;
-    rows = table.rows;
-    /* 循环遍历所有表格行 (除了表头) */
-    for (i = 1; i < (rows.length - 1); i++) {
-      shouldSwitch = false;
-      /* 获取需要比较的两个元素 */
-      x = rows[i].getElementsByTagName("TD")[n];
-      y = rows[i + 1].getElementsByTagName("TD")[n];
-      /* 检查是否需要交换 */
-      if (dir == "asc") {
-        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-          // 如果 x 应该排在 y 后面
-          shouldSwitch = true;
-          break;
-        }
-      } else if (dir == "desc") {
-        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-          // 如果 x 应该排在 y 前面
-          shouldSwitch = true;
-          break;
-        }
-      }
-    }
-    if (shouldSwitch) {
-      /* 如果需要交换，则交换行并标记 switching 为 true */
-      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-      switching = true;
-      // 每次交换后增加 switchcount
-      switchcount ++;
-    } else {
-      /* 如果没有交换发生，并且排序方向是 "asc"，则将其更改为 "desc" 并再次运行循环 */
-      if (switchcount == 0 && dir == "asc") {
-        dir = "desc";
-        switching = true;
-      }
-    }
-  }
-}    
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script>
+$(document).ready( function () {
+    $('#myTable').DataTable();
+} );
 </script>
+
 </body>
 </html>
