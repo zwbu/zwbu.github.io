@@ -21,6 +21,20 @@
         header h1 {
             margin: 0;
         }
+        
+        /* 初始化计数器 */
+        tbody {
+          counter-reset: rowNumber;
+        }
+        
+        /* 在每个表格行之前递增计数器并显示 */
+        tr:not(thead tr)::before { /*排除表头*/
+          counter-increment: rowNumber;
+          content: counter(rowNumber);
+          display: table-cell; /* 使序号显示在单独的单元格中 */
+          padding-right: 8px; /* 增加一些右侧内边距 */
+          text-align: right;
+        }
 
         table {
             width: 90%;
@@ -58,20 +72,6 @@
             background: #333;
             color: #fff;
         }
-        
-        /* 初始化计数器 */
-        tbody {
-          counter-reset: rowNumber;
-        }
-        
-        /* 在每个表格行之前递增计数器并显示 */
-        tr:not(thead tr)::before { /*排除表头*/
-          counter-increment: rowNumber;
-          content: counter(rowNumber);
-          display: table-cell; /* 使序号显示在单独的单元格中 */
-          padding-right: 8px; /* 增加一些右侧内边距 */
-          text-align: right;
-        }
     </style>
 </head>
 <body>
@@ -96,7 +96,7 @@ fetch('files/paperdata.json') // 替换为你的 JSON 文件路径
     const tbody = table.querySelector('tbody');
 
     if (data.length > 0) {
-        // 创建表头
+        // 创建其他表头
         const headers = Object.keys(data[0]);
         headers.forEach(headerText => {
             const th = document.createElement('th');
@@ -105,8 +105,14 @@ fetch('files/paperdata.json') // 替换为你的 JSON 文件路径
         });
 
         // 创建表格行
-        data.forEach(item => {
+        data.forEach((item, index) => { // index 参数表示当前元素的索引
             const row = document.createElement('tr');
+
+            // 创建序号单元格
+            const indexCell = document.createElement('td');
+            indexCell.textContent = index + 1; // 序号从 1 开始
+            row.appendChild(indexCell);
+
             headers.forEach(header => {
                 const cell = document.createElement('td');
                 cell.textContent = item[header];
