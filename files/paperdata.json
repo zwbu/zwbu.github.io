@@ -1,17 +1,31 @@
 [
   {
-    "姓名": "张三",
-    "年龄": 30,
-    "城市": "北京"
+    "Authors": "Zhu, K., <strong>Zhang, Y</strong>",
+    "Year": 2017,
+    "Title": "Modeling of the instantaneous milling force per tooth with tool run-out effect in high speed ball-end milling",
+    "Journals": "International Journal of Machine Tools and Manufacture",
+    "Volume": 118,
+    "Issue": null,
+    "Page": "37-48",
+    "IF": 14,
+    "Citations": 56,
+    "JCR '23": 1
+    "Article link": "https://www.sciencedirect.com/science/article/abs/pii/S0890695517300639",
+    "IF link": "https://www.letpub.com.cn/index.php?journalid=3789&page=journalapp&view=detail"
   },
+  
   {
-    "姓名": "李四",
-    "年龄": 25,
-    "城市": "上海"
-  },
-    {
-    "姓名": "王五",
-    "年龄": 35,
-    "城市": "广州"
+    "Authors": "王贡献, <strong>张宇</strong>, 胡志辉, 周鹏中",
+    "Year": 2015,
+    "Title": "筒式磁流变液联轴器的机理模型及特征解",
+    "Journals": "华南理工大学学报: 自然科学版",
+    "Volume": 43,
+    "Issue": 6,
+    "Page": "48-55",
+    "IF": null,
+    "Citations": 2,
+    "JCR '23": null,
+    "Article link": "https://zrb.bjb.scut.edu.cn/CN/10.3969/j.issn.1000-565X.2015.06.008",
+    "IF link": null // 不适用
   }
 ]
