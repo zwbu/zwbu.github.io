@@ -241,11 +241,13 @@
                     })
                     .then(data => {
                         // 在这里处理 JSON 数据
+                        console.log(data); // 在控制台输出数据
+
                         // 将数据展示在页面上（示例）
                         const container = document.getElementById('data-container');
                         let output = '<ul>';
                         data.forEach(item => {
-                            output += '<li>${item.name}: ${item.value}</li>'; //根据你的json结构修改
+                            output += `<li>${item.name}: ${item.value}</li>`; //根据你的json结构修改
                         });
                         output += '</ul>';
                         container.innerHTML = output;
