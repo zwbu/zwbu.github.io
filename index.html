@@ -311,16 +311,75 @@
             </ol>
             <section id="patent">
             <h3>专利</h3>
+            <p class="note">
+                See also: 
+                <img
+                src="images/Google_Sheets_logo_(2014-2020).svg"
+                style="width: 1em; margin-inline-start: 0.5em"
+                alt="Google Sheets icon"/>
+                <a href="/patenttable">Sheet</a>. 
+                Updated: January 13, 2025.
+            </p>
             <ol>
-                <p class="note">
-                    See also: 
-                    <img
-                    src="images/Google_Sheets_logo_(2014-2020).svg"
-                    style="width: 1em; margin-inline-start: 0.5em"
-                    alt="Google Sheets icon"/>
-                    <a href="/patenttable">Sheet</a>. 
-                    Updated: January 13, 2025.
-                </p>
+                <div id="data-container"></div>
+                <script>
+                    // 输出论文
+                    fetch('files/patentdata.json') // 替换为你的 JSON 文件路径
+                        .then(response => {
+                        if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        return response.json(); // 将响应解析为 JSON
+                    })
+                    .then(data => {
+                        // 在这里处理 JSON 数据
+                        console.log(data); // 在控制台输出数据
+
+                        // 将数据展示在页面上（示例）
+                        const container = document.getElementById('data-container');
+                        let output = '<ul>';
+                        data.forEach(item => {
+                            // 为名字加粗
+                            var keyname1 = "Zhang, Y.*";
+                            var keyname2 = "张宇*";
+                            var outAuthors = `${item["Authors"]}`;
+                            var index1 = -1;
+                            var index2 = -1;
+                            var index1 = outAuthors.indexOf(keyname1);
+                            var index2 = outAuthors.indexOf(keyname2);
+                            if (index1 !== -1) {
+                                var outAuthors = outAuthors.substring(0, index1) +
+                                                        "<strong>" + keyname1 + "</strong>" +
+                                                        outAuthors.substring(index1 + keyname1.length);
+                            }
+                            if (index2 !== -1) {
+                                var outAuthors = outAuthors.substring(0, index2) +
+                                                        "<strong>" + keyname2 + "</strong>" +
+                                                        outAuthors.substring(index2 + keyname2.length);
+                            }
+
+                            if (item["Article Link"] === null){ // 判断是否存在Patent Link
+                                var outTitle = `${item["Title"]}`;
+                            } else {
+                                var outTitle = `<a href="${item["Patent Link"]}">` + `${item["Title"]}` + `</a>`;
+                            }
+
+                            // 依次输出结果
+                            output += `<li>${outAuthors} ${outTitle}: ${item["Nation"]}, ${item["Grant Number"]}. 授权时间: ${item["Grant Date"]}.</li>`; //根据你的json结构修改
+                        });
+                        output += '</ul>';
+                        container.innerHTML = output;
+                    })
+                    .catch(error => {
+                        console.error('Error fetching JSON:', error);
+                        const container = document.getElementById('data-container');
+                        container.innerHTML = "加载数据出错";
+                    });
+                </script>
+
+
+
+
                 <li><strong>张宇</strong>, 朱锟鹏, 姚层林, 韩昌. 
                     一种微铣削刀具后刀面磨损机器视觉检测方法: 中国, 审中.</li>
                 <li>李刚, 朱锟鹏, <strong>张宇</strong>. 
