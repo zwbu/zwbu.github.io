@@ -232,6 +232,7 @@
             <ol>
                 <div id="data-container"></div>
                 <script>
+                    // 输出论文
                     fetch('files/paperdata.json') // 替换为你的 JSON 文件路径
                         .then(response => {
                         if (!response.ok) {
@@ -247,11 +248,34 @@
                         const container = document.getElementById('data-container');
                         let output = '<ul>';
                         data.forEach(item => {
+
+                            var keyname1 = "Zhang, Y.";
+                            var keyname2 = "张宇";
+                            var index1 = -1;
+                            var index2 = -1;
+                            var index1 = text.indexOf(keyname1);
+                            var index2 = text.indexOf(keyname2);
+                            if ((index1 === -1) && (index2 === -1)) {
+                                var outAuthors = `${item["Authors"]}`;
+                            } else {
+                                if (index1 !== -1) {
+                                    var outAuthors = text.substring(0, index) +
+                                                            "<strong>" + keyname1 + "</strong>" +
+                                                            text.substring(index1 + keyname1.length);
+                                }
+                                if (index2 !== -1) {
+                                    var outAuthors = text.substring(0, index) +
+                                                            "<strong>" + keyname2 + "</strong>" +
+                                                            text.substring(index2 + keyname2.length);
+                                }
+                            }
+
                             if (item["Article Link"] === null){ // 判断是否存在Article Link
                                 var outTitle = `${item["Title"]}`;
                             } else {
                                 var outTitle = `<a href="${item["Article Link"]}">` + `${item["Title"]}` + `</a>`;
                             }
+
                             if (item["IF"] === null){ // 判断是否存在IF
                                 var outIF = "";
                             } else {
@@ -261,22 +285,25 @@
                                     var outIF = `(IF: ` + `<a href="${item["IF Link"]}">` + `${item["IF"]}` + `</a>) `;
                                 } 
                             }
+
                             if (item["Citations"] === null){ // 判断是否存在Citations
                                 var outCitations = "";
                             } else {
                                 var outCitations = `(Citations: ${item["Citations"]}) `;
                             }
+
                             if (item["JCR"] === null){ // 判断是否存在JCR
                                 var outJCR = "";
                             } else {
                                 var outJCR = `(SCI: ${item["JCR"]}区)`;
                             }
+
+                            // 依次输出结果
                             output += `<li>${item["Authors"]} (${item["Year"]}). ${outTitle}. ${item["Journals"]}, ${item["Volume (Issue): Pages"]}. 
                                 ${outIF}${outCitations}${outJCR}</li>`; //根据你的json结构修改
                         });
                         output += '</ul>';
                         container.innerHTML = output;
-
                     })
                     .catch(error => {
                         console.error('Error fetching JSON:', error);
