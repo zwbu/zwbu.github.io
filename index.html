@@ -230,6 +230,33 @@
                 Updated: January 13, 2025.
             </p>
             <ol>
+                <script>
+                    fetch('files/paperdata.json') // 替换为你的 JSON 文件路径
+                        .then(response => {
+                        if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        return response.json(); // 将响应解析为 JSON
+                    })
+                    .then(data => {
+                        // 在这里处理 JSON 数据
+                        // 将数据展示在页面上（示例）
+                        const container = document.getElementById('data-container');
+                        let output = '<ul>';
+                        data.forEach(item => {
+                            output += '<li>${item.name}: ${item.value}</li>'; //根据你的json结构修改
+                        });
+                        output += '</ul>';
+                        container.innerHTML = output;
+
+                    })
+                    .catch(error => {
+                        console.error('Error fetching JSON:', error);
+                        const container = document.getElementById('data-container');
+                        container.innerHTML = "加载数据出错";
+                    });
+                </script>
+
                 <li><strong>Zhang, Y.</strong>, Gao, S., Duan, X., Zhu, K. (2025). <a href="https://www.sciencedirect.com/science/article/abs/pii/S0043164825000080">
                     A visual analytical method for evaluating tool flank wear volumes of micro-milling cutters with AKAZE features matching: a preliminary study</a>. 
                     Wear, 
