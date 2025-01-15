@@ -247,10 +247,15 @@
                         const container = document.getElementById('data-container');
                         let output = '<ul>';
                         data.forEach(item => {
+                            if (item["Article Link"] === null){ // 判断是否存在Article Link
+                                var outTitle = `${item["Title"]}`;
+                            } else {
+                                var outTitle = `<a href="${item["Article Link"]}">` + `${item["Title"]}` + `</a>`;
+                            }
                             if (item["IF"] === null){ // 判断是否存在IF
                                 var outIF = "";
                             } else {
-                                if (item["IF Link"] === null) {
+                                if (item["IF Link"] === null) { // 判断是否存在IF Link
                                     var outIF = `(IF: ${item["IF"]}) `;
                                 } else {
                                     var outIF = `(IF: ` + `<a href="${item["IF Link"]}">` + `${item["IF"]}` + `</a>) `;
@@ -266,7 +271,7 @@
                             } else {
                                 var outJCR = `(SCI: ${item["JCR"]}区)`;
                             }
-                            output += `<li>${item["Authors"]} (${item["Year"]}). ${item["Title"]}. ${item["Journals"]}, ${item["Volume (Issue): Pages"]}. 
+                            output += `<li>${item["Authors"]} (${item["Year"]}). ${outTitle}. ${item["Journals"]}, ${item["Volume (Issue): Pages"]}. 
                                 ${outIF}${outCitations}${outJCR}</li>`; //根据你的json结构修改
                         });
                         output += '</ul>';
