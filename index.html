@@ -323,7 +323,7 @@
             <ol>
                 <div id="patent-container"></div>
                 <script>
-                    // 输出论文
+                    // 输出专利
                     fetch('files/patentdata.json') // 替换为你的 JSON 文件路径
                         .then(response => {
                         if (!response.ok) {
@@ -358,7 +358,7 @@
                                                         outAuthors.substring(index2 + keyname2.length);
                             }
 
-                            if (item["Article Link"] === null){ // 判断是否存在Patent Link
+                            if (item["Patent Link"] === null){ // 判断是否存在Patent Link
                                 var outTitle = `${item["Title"]}`;
                             } else {
                                 var outTitle = `<a href="${item["Patent Link"]}">` + `${item["Title"]}` + `</a>`;
