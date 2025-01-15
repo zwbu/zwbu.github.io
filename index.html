@@ -247,8 +247,7 @@
                         const container = document.getElementById('data-container');
                         let output = '<ul>';
                         data.forEach(item => {
-                            output += `<li>${item.Authors} (${item.Year}). ${item.Title}. ${item.Journals}, ${item."Volume (Issue): Pages"}. 
-                                (IF: ${item.IF}, Citations: ${item.Citations}) (SCI: ${item."JCR '23"}区) </li>`; //根据你的json结构修改
+                            output += `<li>${item.Authors} (${item.Year}). ${item.Title}. ${item.Journals},</li>`; //根据你的json结构修改
                         });
                         output += '</ul>';
                         container.innerHTML = output;
