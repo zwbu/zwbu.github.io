@@ -1,0 +1,55 @@
+[ 
+  {
+    "Authors": "张宇*, 朱锟鹏, 姚层林, 韩昌.",
+    "Title": "一种微铣削刀具后刀面磨损机器视觉检测方法",
+    "Nation": "中国",
+    "Grant Number": null,
+    "Grant Date": "审中",
+    "Patent Link": null
+  },
+  
+  {
+    "Authors": "李刚, 朱锟鹏, 张宇*.",
+    "Title": "一种跨尺度的混合铣削力建模方法",
+    "Nation": "中国",
+    "Grant Number": "CN116560302",
+    "Grant Date": "审中",
+    "Patent Link": null
+  },
+  
+  {
+    "Authors": "朱锟鹏, 张宇*, 袁德志, 郭浩.",
+    "Title": "高速铣削加工中基于振动信号的刀具跳动参数在线估计法",
+    "Nation": "中国",
+    "Grant Number": "CN114273974",
+    "Grant Date": "2023-07-25",
+    "Patent Link": "https://patentscope.wipo.int/search/zh/detail.jsf?docId=CN357974354&_cid=P21-M4CIDB-41640-1"
+  },
+  
+  {
+    "Authors": "朱锟鹏, 袁德志, 张宇*, 郭浩.",
+    "Title": "一种基于扩展卡尔曼滤波与切削力模型的换刀监测方法",
+    "Nation": "中国",
+    "Grant Number": "CN113199304",
+    "Grant Date": "2022-03-15",
+    "Patent Link": "https://patentscope.wipo.int/search/zh/detail.jsf?docId=CN333769086&_cid=P21-M4CIFY-43512-1"
+  },
+  
+  {
+    "Authors": "朱锟鹏, 李斯, 张宇*.",
+    "Title": "用于平头微铣削刀具磨损预测和加工参数优化的通用方法",
+    "Nation": "中国",
+    "Grant Number": "CN111007800",
+    "Grant Date": "2020-10-30",
+    "Patent Link": "https://patentscope.wipo.int/search/zh/detail.jsf?docId=CN294249624&_cid=P21-M4CIGP-44182-1"
+  },
+
+  {
+    "Authors": "朱锟鹏, 施云高, 李国超, 张宇*.",
+    "Title": "一种微铣削加工刀具跳动参数的快速识别方法",
+    "Nation": "中国",
+    "Grant Number": "CN110253341",
+    "Grant Date": "2020-05-03",
+    "Patent Link": "https://patentscope.wipo.int/search/zh/detail.jsf?docId=CN254008951&_cid=P21-M4CIHX-45009-1"
+  }
+]
