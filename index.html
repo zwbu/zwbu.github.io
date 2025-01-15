@@ -379,7 +379,77 @@
             </ol>
             <section id="softwareCopyright">
             <h3>软著</h3>
+            <p class="note">
+                See also: 
+                <img
+                src="images/Google_Sheets_logo_(2014-2020).svg"
+                style="width: 1em; margin-inline-start: 0.5em"
+                alt="Google Sheets icon"/>
+                <a href="/sctable">Sheet</a>. 
+                Updated: January 13, 2025.
+            </p>
             <ol>
+                <div id="sc-container"></div>
+                <script>
+                    // 输出软著
+                    fetch('files/scdata.json') // 替换为你的 JSON 文件路径
+                        .then(response => {
+                        if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        return response.json(); // 将响应解析为 JSON
+                    })
+                    .then(data => {
+                        // 在这里处理 JSON 数据
+                        console.log(data); // 在控制台输出数据
+
+                        // 将数据展示在页面上（示例）
+                        const container = document.getElementById('sc-container');
+                        let output = '<ul>';
+                        data.forEach(item => {
+                            // 为名字加粗
+                            var keyname1 = "Zhang, Y.*";
+                            var keyname2 = "张宇*";
+                            var outAuthors = `${item["Authors"]}`;
+                            var index1 = -1;
+                            var index2 = -1;
+                            var index1 = outAuthors.indexOf(keyname1);
+                            var index2 = outAuthors.indexOf(keyname2);
+                            if (index1 !== -1) {
+                                var outAuthors = outAuthors.substring(0, index1) +
+                                                        "<strong>" + keyname1 + "</strong>" +
+                                                        outAuthors.substring(index1 + keyname1.length);
+                            }
+                            if (index2 !== -1) {
+                                var outAuthors = outAuthors.substring(0, index2) +
+                                                        "<strong>" + keyname2 + "</strong>" +
+                                                        outAuthors.substring(index2 + keyname2.length);
+                            }
+
+                            if (item["Software Copyright Link"] === null){ // 判断是否存在Software Copyright Link
+                                var outTitle = `${item["Title"]}`;
+                            } else {
+                                var outTitle = `<a href="${item["Software Copyright Link"]}">` + `${item["Title"]}` + `</a>`;
+                            }
+
+                            // 依次输出结果
+                            output += `<li>${outAuthors} ${outTitle}. ${item["Software Copyright Number"]}. 登记时间: ${item["Software Copyright Date"]}.</li>`; //根据你的json结构修改
+                        });
+                        output += '</ul>';
+                        container.innerHTML = output;
+                    })
+                    .catch(error => {
+                        console.error('Error fetching JSON:', error);
+                        const container = document.getElementById('sc-container');
+                        container.innerHTML = "加载数据出错";
+                    });
+                </script>
+
+
+
+
+
+
                 <li>朱锟鹏, <strong>张宇</strong>, 李斯. <a href="https://banquan.tianyancha.com/rj/19o9o79z067825338898f1110l10o598">
                     铣削加工过程分析系统 V1.0</a>, 2021SR1549492, 登记时间: 2021.10.22.</li>
             </ol>
