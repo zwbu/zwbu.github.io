@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yu Zhang</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+        }
+        
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+        }
+        
+        header h1 {
+            margin: 0;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            background: #444;
+        }
+        
+        nav ul {
+            list-style: none; /* 去除列表默认样式 */
+            margin: 0;
+            padding: 0;
+            background-color: #444; /* 导航栏背景色 */
+            /* overflow: hidden; 防止子元素溢出 */
+        }
+        
+        nav li {
+            float: left; /* 使列表项水平排列 */
+        }
+        
+        nav a {
+            display: block; /* 使链接占据整个列表项区域 */
+            color: white;
+            text-align: center;
+            padding: 5px 10px;
+            text-decoration: none;
+            transition: color 0.3s ease; /* 添加过渡效果，使颜色变化更平滑 */
+        }
+        
+        /* 下拉菜单样式 */
+        .dropdown {
+            position: relative; /* 为下拉菜单定位做准备 */
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none; /* 默认隐藏下拉菜单 */
+            position: absolute;
+            background-color: #eee;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1; /* 确保下拉菜单在其他内容之上 */
+        }
+        
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            transition: color 0.3s ease; /* 添加过渡效果 */
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block; /* 鼠标悬停时显示下拉菜单 */
+        }
+        
+        /* 鼠标悬停时的样式 */
+        nav a:hover, .dropdown:hover .dropbtn {
+            background: #555;
+            border-radius: 5px;
+            color: yellow; /* 鼠标悬停在主导航链接上的文字颜色 */
+        }
+        
+        .dropdown-content a:hover {
+          color: yellow; /* 鼠标悬停在下拉菜单项上的文字颜色 */
+          background-color: #444; /*鼠标悬停在下拉菜单项上的背景颜色*/
+        }
+        
+        .container {
+            margin-top: 5px;
+        }
+        
+        .bsection {
+            text-align: left;
+            padding: 20px 20px;
+            background: #f4f4f4;
+        }
+        
+        .bsection h2 {
+            margin-top: 1px;
+        }
+        
+        .bsection h3 {
+            margin-top: 1px;
+            font-size: 18px;
+        }
+        
+        .note {
+            margin-top: 1px;
+            margin-left: 15px;
+            font-size: 14px;
+            font-style: italic;
+        }
+        
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* 奇数行背景色 */
+        tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+        
+        /* 偶数行背景色 */
+        tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+        
+        th {
+            border: 1.5px solid #888;
+            text-align: left;
+            padding: 10px 10px;
+            background-color: #dbacfa;
+        }
+        
+        td {
+            border: 1.5px solid #888;
+            text-align: left;
+            padding: 10px 10px;
+        }
+        
+        ul, ol {
+            list-style-type: decimal;
+            margin: 20px 0;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+        
+        li {
+            margin: 5px 0;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Yu Zhang</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#course">课程项目</a></li>
+            <li class="dropdown">
+                <a href="#achievement" class="dropbtn">代表成果</a>
+                <div class="dropdown-content">
+                    <a href="#paper">论文</a>
+                    <a href="#patent">专利</a>
+                    <a href="#softwareCopyright">软著</a>
+                </div>
+            </li>
+            <li><a href="#contact">联系方式</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <section id="course" class="bsection">
+            <h2>&sect; 课程项目</h2>
+            <table>
+                <caption><strong>课程列表</strong></caption>
+                <thead>
+                    <tr>
+                        <th>时间</th>
+                        <th>课程</th>
+                        <th>课时</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2025春</td>
+                        <td><a href="/fmm25" title="《机械制造基础》课程主页（2025春）">机械制造基础</a></td>
+                        <td>TBA</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="achievement" class="bsection">
+            <h2>&sect; 代表成果</h2>
+            <section id="paper">
+            <h3>论文</h3>
+            <p class="note">
+                See also: 
+                <img
+                src="images/ORCIDiD_icon16x16.png"
+                style="width: 1em; margin-inline-start: 0.5em"
+                alt="ORCID iD icon"/>
+                <a href="https://orcid.org/0000-0003-3604-2758">ORCID</a>. 
+                <img
+                src="images/Google_Scholar_logo.svg"
+                style="width: 1em; margin-inline-start: 0.5em"
+                alt="Google Scholar icon"/>
+                <a href="https://scholar.google.com/citations?user=29I2rtoAAAAJ&hl=en">Google Scholar</a>. 
+                <img
+                src="images/Google_Sheets_logo_(2014-2020).svg"
+                style="width: 1em; margin-inline-start: 0.5em"
+                alt="Google Sheets icon"/>
+                <a href="/papertable">Sheet</a>. 
+                Updated: January 13, 2025.
+            </p>
+            <ol>
+                <li><strong>Zhang, Y.</strong>, Gao, S., Duan, X., Zhu, K. (2025). <a href="https://www.sciencedirect.com/science/article/abs/pii/S0043164825000080">
+                    A visual analytical method for evaluating tool flank wear volumes of micro-milling cutters with AKAZE features matching: a preliminary study</a>. 
+                    Wear, 
+                    205739. (IF: <a href="https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=8087">5.3</a>) (SCI一区)</li>
+                <li><strong>Zhang, Y.</strong>, Duan, X., Zhu, K. (2025). 
+                    Cutting force and state identification in high-speed milling: A semi-analytical multi-dimensional approach. 
+                    <a href="https://cjme.springeropen.com/">Chinese Journal of Mechanical Engineering</a>, 
+                    (Accepted and proofed, awaiting publication) (IF: <a href="https://letpub.com.cn/index.php?journalid=1714&page=journalapp&view=detail">4.6</a>) (SCI二区)</li>
+                <li>Gao, S., Duan, X., Zhu, K., <strong>Zhang, Y.</strong> (2024). <a href="https://www.sciencedirect.com/science/article/abs/pii/S0888327024000025">
+                    Investigation of the tool flank wear influence on cutter-workpiece engagement and cutting force in micro milling processes</a>. 
+                    Mechanical Systems and Signal Processing, 
+                    209: 111104. (IF: <a href="https://www.letpub.com.cn/index.php?journalid=5762&page=journalapp&view=detail">7.9</a>, Citations: 4) (SCI一区)</li>
+                <li>Gao, S., Duan, X., Zhu, K., <strong>Zhang, Y.</strong> (2024). <a href="https://link.springer.com/article/10.1007/s00170-024-13794-3">
+                    Influence of tool flank wear considering tool edge radius on instantaneous uncut chip thickness and cutting force in micro-end milling</a>. 
+                    The International Journal of Advanced Manufacturing Technology, 
+                    133: 1639–1650. (IF: <a href="https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=3652">2.9</a>) (SCI三区)</li>
+                <li>Duan, X., Su, F., Gao, S., Zhu, K., Deng, B., <strong>Zhang, Y.</strong> (2024). <a href="https://www.sciencedirect.com/science/article/pii/S2238785424014637">
+                    Relationship between energy efficiency and surface morphologies in micro-milling of SLM Inconel 718</a>. 
+                    Journal of Materials Research and Technology, 
+                    31: 1473-1482. (IF: <a href="https://www.letpub.com.cn/index.php?journalid=10243&page=journalapp&view=detail">6.2</a>) (SCI一区)</li>
+                <li>李刚, <strong>张宇</strong>, 李斯, 朱锟鹏. (2023). <a href="https://hkxb.buaa.edu.cn/CN/10.7527/S1000-6893.2022.27261">
+                    基于运动学的高速高精密铣削力建模：综合模型与试验</a>. 航空学报, 44(8): 427261.</li>
+                <li>Gao, S., Duan, X., Zhu, K., <strong>Zhang, Y.</strong> (2022). <a href="https://www.mdpi.com/2072-666X/13/11/1805">
+                    Generic Cutting Force Modeling with Comprehensively Considering Tool Edge Radius, Tool Flank Wear and Tool Runout in Micro-End Milling</a>. 
+                    Micromachines, 
+                    13(11): 1805. (IF: <a href="https://www.letpub.com.cn/index.php?journalid=9588&page=journalapp&view=detail">3.0</a>) (SCI三区)</li>
+                <li>李鑫, <strong>张宇</strong>, 朱锟鹏. (2022). <a href="http://zhjcz.com.cn/index/catalog/info?id=53">
+                    基于S变换时频特征的刀具磨损监测方法</a>. 组合机床与自动化加工技术, 10: 88-91.</li>
+                <li><strong>Zhang, Y.</strong>, Zhu, K. (2022). <a href="">
+                    Tool wear estimation with a data-driven physics coupling approach</a>. 
+                    Manufacturing Letters, 
+                    34: 38-42. (IF: <a href="https://www.letpub.com.cn/index.php?journalid=24809&page=journalapp&view=detail">1.9</a>) (SCIE/EI)</li>
+                <li>Guo, H., <strong>Zhang, Y.</strong>, Zhu, K. (2022). <a href="https://www.sciencedirect.com/science/article/abs/pii/S2213846322001924">
+                    Interpretable Deep Learning Approach for Tool Wear Monitoring in High-speed Milling</a>. 
+                    Computers in Industry, 
+                    138: 103638. (IF: <a href="https://www.letpub.com.cn/index.php?journalid=2017&page=journalapp&view=detail">8.2</a>, Citations: 38) (SCI一区)</li>
+                <li><strong>Zhang, Y.</strong>, Li, G., Zhu, K. (2021). <a href="https://dl.acm.org/doi/abs/10.1145/3471985.3472373">
+                    A novel approach to estimating runout effect in high-speed milling</a>. 
+                    The 5th International Conference on Robotics, Control and Automation (ICRCA 2021), 
+                    54-57. (EI)</li>
+                <li><strong>Zhang, Y.</strong>, Zhu, K., Duan, X., Li, S. (2021). <a href="https://www.sciencedirect.com/science/article/abs/pii/S0888327021000121">
+                    Tool wear estimation and life prognostics in milling: Model extension and generalization</a>. 
+                    Mechanical Systems and Signal Processing, 
+                    155: 107617. (IF: <a href="https://www.letpub.com.cn/index.php?journalid=5762&page=journalapp&view=detail">7.9</a>, Citations: 53) (SCI一区)</li>
+                <li><strong>Zhang, Y.</strong>, Li, S., Zhu, K. (2020). <a href="https://www.sciencedirect.com/science/article/abs/pii/S0020740319328668">
+                    Generic instantaneous force modeling and comprehensive real engagement identification in micro-milling</a>. 
+                    International Journal of Mechanical Sciences, 
+                    176: 105504. (IF: <a href="https://www.letpub.com.cn/index.php?journalid=3795&page=journalapp&view=detail">7.1</a>, Citations: 24) (SCI一区)</li>
+                <li>Zhu, K., Li, G., <strong>Zhang, Y</strong>. (2019). <a href="https://ieeexplore.ieee.org/document/8918449/">
+                    Big data oriented smart tool condition monitoring system</a>. 
+                    IEEE Transactions on Industrial Informatics, 
+                    16(6): 4007-4016. (IF: <a href="https://www.letpub.com.cn/index.php?journalid=3392&page=journalapp&view=detail">11.7</a>, Citations: 87) (SCI一区)</li>
+                <li>Zhu, K., <strong>Zhang, Y</strong>. (2019). <a href="https://www.sciencedirect.com/science/article/abs/pii/S0888327018303042">
+                    A generic tool wear model and its application to force modeling and wear monitoring in high speed milling</a>. 
+                    Mechanical Systems and Signal Processing, 
+                    115: 147-161. (IF: <a href="https://www.letpub.com.cn/index.php?journalid=5762&page=journalapp&view=detail">7.9</a>, Citations: 134) (SCI一区)</li>
+                <li>Zhu, K., <strong>Zhang, Y</strong>. (2018). <a href="https://ieeexplore.ieee.org/abstract/document/8356631">
+                    A cyber-physical production system framework of smart CNC machining monitoring system</a>. 
+                    IEEE/ASME Transactions on Mechatronics, 
+                    23(6): 2579-2586. (IF: <a href="https://www.letpub.com.cn/index.php?journalid=3433&page=journalapp&view=detail">6.1</a>, Citations: 55) (SCI一区)</li>
+                <li>Zhu, K., <strong>Zhang, Y</strong>. (2017). <a href="https://www.sciencedirect.com/science/article/abs/pii/S0890695517300639">
+                    Modeling of the instantaneous milling force per tooth with tool run-out effect in high speed ball-end milling</a>. 
+                    International Journal of Machine Tools and Manufacture, 
+                    118: 37-48. (IF: <a href="https://www.letpub.com.cn/index.php?journalid=3789&page=journalapp&view=detail">14</a>, Citations: 56) (SCI一区)</li>
+                <li>王贡献, <strong>张宇</strong>, 胡志辉, 周鹏中. (2015). <a href="https://zrb.bjb.scut.edu.cn/CN/10.3969/j.issn.1000-565X.2015.06.008">
+                    筒式磁流变液联轴器的机理模型及特征解</a>. 华南理工大学学报: 自然科学版, 43(6): 48-55.</li>
+            </ol>
+            <section id="patent">
+            <h3>专利</h3>
+            <ol>
+                <li><strong>张宇</strong>, 朱锟鹏, 姚层林, 韩昌. 
+                    一种微铣削刀具后刀面磨损机器视觉检测方法: 中国, 审中.</li>
+                <li>李刚, 朱锟鹏, <strong>张宇</strong>. 
+                    一种跨尺度的混合铣削力建模方法: 中国, CN116560302. 审中.</li>
+                <li>朱锟鹏, <strong>张宇</strong>, 袁德志, 郭浩. <a href="https://patentscope.wipo.int/search/zh/detail.jsf?docId=CN357974354&_cid=P21-M4CIDB-41640-1">
+                    高速铣削加工中基于振动信号的刀具跳动参数在线估计法</a>: 中国, CN114273974. 授权时间: 2023.07.25.</li>
+                <li>朱锟鹏, 袁德志, <strong>张宇</strong>, 郭浩. <a href="https://patentscope.wipo.int/search/zh/detail.jsf?docId=CN333769086&_cid=P21-M4CIFY-43512-1">
+                    一种基于扩展卡尔曼滤波与切削力模型的换刀监测方法</a>: 中国, CN113199304. 授权时间: 2022.03.15.</li>
+                <li>朱锟鹏, 李斯, <strong>张宇</strong>. <a href="https://patentscope.wipo.int/search/zh/detail.jsf?docId=CN294249624&_cid=P21-M4CIGP-44182-1">
+                    用于平头微铣削刀具磨损预测和加工参数优化的通用方法</a>: 中国, CN111007800. 授权时间: 2020.10.30.</li>
+                <li>朱锟鹏, 施云高, 李国超, <strong>张宇</strong>. <a href="https://patentscope.wipo.int/search/zh/detail.jsf?docId=CN254008951&_cid=P21-M4CIHX-45009-1">
+                    一种微铣削加工刀具跳动参数的快速识别方法</a>: 中国, CN110253341. 授权时间: 2020.05.03.</li>
+            </ol>
+            <section id="softwareCopyright">
+            <h3>软著</h3>
+            <ol>
+                <li>朱锟鹏, <strong>张宇</strong>, 李斯. <a href="https://banquan.tianyancha.com/rj/19o9o79z067825338898f1110l10o598">
+                    铣削加工过程分析系统 V1.0</a>, 2021SR1549492, 登记时间: 2021.10.22.</li>
+            </ol>
+        </section>
+        <section id="contact" class="bsection">
+            <h2>&sect; 联系方式</h2>
+            <p><a href="mailto:yzhwbu@gmail.com?subject=咨询&body=张老师，您好：我想咨询以下内容：">yzhwbu@gmail.com</a></p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2025 Yu Zhang. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
