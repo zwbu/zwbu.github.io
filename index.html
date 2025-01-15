@@ -230,7 +230,7 @@
                 Updated: January 13, 2025.
             </p>
             <ol>
-                <div id="data-container"></div>
+                <div id="paper-container"></div>
                 <script>
                     // 输出论文
                     fetch('files/paperdata.json') // 替换为你的 JSON 文件路径
@@ -245,7 +245,7 @@
                         console.log(data); // 在控制台输出数据
 
                         // 将数据展示在页面上（示例）
-                        const container = document.getElementById('data-container');
+                        const container = document.getElementById('paper-container');
                         let output = '<ul>';
                         data.forEach(item => {
                             // 为名字加粗
@@ -304,7 +304,7 @@
                     })
                     .catch(error => {
                         console.error('Error fetching JSON:', error);
-                        const container = document.getElementById('data-container');
+                        const container = document.getElementById('paper-container');
                         container.innerHTML = "加载数据出错";
                     });
                 </script>
@@ -321,7 +321,7 @@
                 Updated: January 13, 2025.
             </p>
             <ol>
-                <div id="data-container"></div>
+                <div id="patent-container"></div>
                 <script>
                     // 输出论文
                     fetch('files/patentdata.json') // 替换为你的 JSON 文件路径
@@ -336,7 +336,7 @@
                         console.log(data); // 在控制台输出数据
 
                         // 将数据展示在页面上（示例）
-                        const container = document.getElementById('data-container');
+                        const container = document.getElementById('patent-container');
                         let output = '<ul>';
                         data.forEach(item => {
                             // 为名字加粗
@@ -372,7 +372,7 @@
                     })
                     .catch(error => {
                         console.error('Error fetching JSON:', error);
-                        const container = document.getElementById('data-container');
+                        const container = document.getElementById('patent-container');
                         container.innerHTML = "加载数据出错";
                     });
                 </script>
