@@ -39,16 +39,16 @@
   },
 
   {
-    "Authors": "Gao, S., Duan, X., Zhu, K., Zhang, Y.*",
+    "Authors": "Duan, X., Su, F., Gao, S., Zhu, K., Deng, B., Zhang, Y.*",
     "Year": 2024,
-    "Title": "Investigation of the tool flank wear influence on cutter-workpiece engagement and cutting force in micro milling processes",
-    "Journal": "Mechanical Systems and Signal Processing",
-    "Volume (Issue): Pages": "209: 111104",
-    "IF": 7.9,
-    "Citations": 4,
+    "Title": "Relationship between energy efficiency and surface morphologies in micro-milling of SLM Inconel 718",
+    "Journal": "Journal of Materials Research and Technology",
+    "Volume (Issue): Pages": "31: 1473-1482",
+    "IF": 6.2,
+    "Citations": "TBA",
     "JCR": 1,
-    "Article Link": "https://www.sciencedirect.com/science/article/abs/pii/S0888327024000025",
-    "IF Link": "https://www.letpub.com.cn/index.php?journalid=5762&page=journalapp&view=detail"
+    "Article Link": "https://www.sciencedirect.com/science/article/pii/S2238785424014637",
+    "IF Link": "https://www.letpub.com.cn/index.php?journalid=10243&page=journalapp&view=detail"
   },
 
   {
@@ -58,23 +58,23 @@
     "Journal": "The International Journal of Advanced Manufacturing Technology",
     "Volume (Issue): Pages": "133: 1639-1650",
     "IF": 2.9,
-    "Citations": null,
+    "Citations": 1,
     "JCR": 3,
     "Article Link": "https://link.springer.com/article/10.1007/s00170-024-13794-3",
     "IF Link": "https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=3652"
   },
 
   {
-    "Authors": "Duan, X., Su, F., Gao, S., Zhu, K., Deng, B., Zhang, Y.*",
+    "Authors": "Gao, S., Duan, X., Zhu, K., Zhang, Y.*",
     "Year": 2024,
-    "Title": "Relationship between energy efficiency and surface morphologies in micro-milling of SLM Inconel 718",
-    "Journal": "Journal of Materials Research and Technology",
-    "Volume (Issue): Pages": "31: 1473-1482",
-    "IF": 6.2,
-    "Citations": null,
+    "Title": "Investigation of the tool flank wear influence on cutter-workpiece engagement and cutting force in micro milling processes",
+    "Journal": "Mechanical Systems and Signal Processing",
+    "Volume (Issue): Pages": "209: 111104",
+    "IF": 7.9,
+    "Citations": 8,
     "JCR": 1,
-    "Article Link": "https://www.sciencedirect.com/science/article/pii/S2238785424014637",
-    "IF Link": "https://www.letpub.com.cn/index.php?journalid=10243&page=journalapp&view=detail"
+    "Article Link": "https://www.sciencedirect.com/science/article/abs/pii/S0888327024000025",
+    "IF Link": "https://www.letpub.com.cn/index.php?journalid=5762&page=journalapp&view=detail"
   },
 
   {
@@ -84,7 +84,7 @@
     "Journal": "航空学报",
     "Volume (Issue): Pages": "44 (8): 427261",
     "IF": null,
-    "Citations": null,
+    "Citations": 2,
     "JCR": null,
     "Article Link": "https://hkxb.buaa.edu.cn/CN/10.7527/S1000-6893.2022.27261",
     "IF Link": null
@@ -97,7 +97,7 @@
     "Journal": "Micromachines",
     "Volume (Issue): Pages": "13 (11): 1805",
     "IF": 3.0,
-    "Citations": null,
+    "Citations": 11,
     "JCR": 3,
     "Article Link": "https://www.mdpi.com/2072-666X/13/11/1805",
     "IF Link": "https://www.letpub.com.cn/index.php?journalid=9588&page=journalapp&view=detail"
@@ -110,7 +110,7 @@
     "Journal": "组合机床与自动化加工技术",
     "Volume (Issue): Pages": "(10): 88-91",
     "IF": null,
-    "Citations": null,
+    "Citations": 2,
     "JCR": null,
     "Article Link": "http://zhjcz.com.cn/index/catalog/info?id=53",
     "IF Link": null
@@ -123,7 +123,7 @@
     "Journal": "Manufacturing Letters",
     "Volume (Issue): Pages": "34: 38-42",
     "IF": 1.9,
-    "Citations": null,
+    "Citations": 4,
     "JCR": null,
     "Article Link": "https://www.sciencedirect.com/science/article/abs/pii/S2213846322001924",
     "IF Link": "https://www.letpub.com.cn/index.php?journalid=24809&page=journalapp&view=detail"
@@ -136,7 +136,7 @@
     "Journal": "Computers in Industry",
     "Volume (Issue): Pages": "138: 103638",
     "IF": 8.2,
-    "Citations": 38,
+    "Citations": 50,
     "JCR": 1,
     "Article Link": "https://www.sciencedirect.com/science/article/abs/pii/S2213846322001924",
     "IF Link": "https://www.letpub.com.cn/index.php?journalid=2017&page=journalapp&view=detail"
@@ -162,7 +162,7 @@
     "Journal": "Mechanical Systems and Signal Processing",
     "Volume (Issue): Pages": "155: 107617",
     "IF": 7.9,
-    "Citations": 53,
+    "Citations": 66,
     "JCR": 1,
     "Article Link": "https://www.sciencedirect.com/science/article/abs/pii/S0888327021000121",
     "IF Link": "https://www.letpub.com.cn/index.php?journalid=5762&page=journalapp&view=detail"
@@ -175,7 +175,7 @@
     "Journal": "International Journal of Mechanical Sciences",
     "Volume (Issue): Pages": "176: 105504",
     "IF": 7.1,
-    "Citations": 24,
+    "Citations": 25,
     "JCR": 1,
     "Article Link": "https://www.sciencedirect.com/science/article/abs/pii/S0020740319328668",
     "IF Link": "https://www.letpub.com.cn/index.php?journalid=3795&page=journalapp&view=detail"
@@ -188,7 +188,7 @@
     "Journal": "IEEE Transactions on Industrial Informatics",
     "Volume (Issue): Pages": "16 (6): 4007-4016",
     "IF": 11.7,
-    "Citations": 87,
+    "Citations": 94,
     "JCR": 1,
     "Article Link": "https://ieeexplore.ieee.org/document/8918449/",
     "IF Link": "https://www.letpub.com.cn/index.php?journalid=3392&page=journalapp&view=detail"
@@ -201,7 +201,7 @@
     "Journal": "Mechanical Systems and Signal Processing",
     "Volume (Issue): Pages": "115: 147-161",
     "IF": 7.9,
-    "Citations": 134,
+    "Citations": 153,
     "JCR": 1,
     "Article Link": "https://www.sciencedirect.com/science/article/abs/pii/S0888327018303042",
     "IF Link": "https://www.letpub.com.cn/index.php?journalid=5762&page=journalapp&view=detail"
@@ -214,7 +214,7 @@
     "Journal": "IEEE/ASME Transactions on Mechatronics",
     "Volume (Issue): Pages": "23 (6): 2579-2586",
     "IF": 6.1,
-    "Citations": 55,
+    "Citations": 58,
     "JCR": 1,
     "Article Link": "https://ieeexplore.ieee.org/abstract/document/8356631",
     "IF Link": "https://www.letpub.com.cn/index.php?journalid=3433&page=journalapp&view=detail"
