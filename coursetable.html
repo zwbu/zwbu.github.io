@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yu Zhang's course table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        table {
+            width: 90%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+        }
+
+        /* 奇数行背景色 */
+        tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+
+        /* 偶数行背景色 */
+        tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+        
+        /* 可选：添加鼠标悬停效果 */
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        th {
+            border: 1.5px solid #888;
+            text-align: left;
+            padding: 10px 10px;
+            background-color: #dbacfa;
+            position: sticky; /* 固定表头 */
+            top: 0;
+            z-index: 1;       /* 防止表头被内容遮挡 */
+        }
+
+        td {
+            border: 1.5px solid #888;
+            text-align: left;
+            padding: 10px 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Yu Zhang's software copyright table</h1>
+    </header>
+    <table id="myTable">
+        <thead>
+            <tr>
+                <th><abbr title="Number">No.</abbr></th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+<script>
+fetch('files/coursedata.json') // 替换为你的 JSON 文件路径
+  .then(response => response.json())
+  .then(data => {
+    const table = document.getElementById('myTable');
+    const thead = table.querySelector('thead tr');
+    const tbody = table.querySelector('tbody');
+
+    if (data.length > 0) {
+        // 创建其他表头
+        const headers = Object.keys(data[0]);
+        headers.forEach(headerText => {
+            const th = document.createElement('th');
+            th.textContent = headerText;
+            thead.appendChild(th);
+        });
+
+        // 创建表格行
+        data.forEach((item, index) => { // index 参数表示当前元素的索引
+            const row = document.createElement('tr');
+
+            // 创建序号单元格
+            const indexCell = document.createElement('td');
+            indexCell.textContent = index + 1; // 序号从 1 开始
+            row.appendChild(indexCell);
+
+            headers.forEach(header => {
+                const cell = document.createElement('td');
+                let cellValue = item[header];
+                row.appendChild(cell);
+            });
+            tbody.appendChild(row);
+        });
+    } else {
+        const noDataMessage = document.createElement('p');
+        noDataMessage.textContent = "JSON 文件中没有数据。";
+        document.body.appendChild(noDataMessage);
+    }
+  })
+    
+  .catch(error => {
+    console.error('Error fetching JSON:', error);
+      const errorMessage = document.createElement('p');
+      errorMessage.textContent = `加载 JSON 数据出错：${error}`;
+      document.body.appendChild(errorMessage);
+  });
+</script>
+</body>
+</html>
