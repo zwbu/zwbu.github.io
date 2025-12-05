@@ -178,6 +178,7 @@
                 <a href="#teaching" class="dropbtn">教学</a>
                 <div class="dropdown-content">
                     <a href="#course">课程</a>
+                    <a href="#teachingAwards">奖项</a>
                 </div>
             </li>
             <li class="dropdown">
@@ -233,6 +234,56 @@
 
                             // 依次输出结果
                             output += `<li>${item["Year/Semester"]}: ${outCourse}, ${item["Class"]}. ${item["Course Number"]}, ${item["Course Serial Number"]}, ${item["Course Attributes"]}, ${item["Number of Students"]}人. ${item["Teaching Week"]} - ${item["Date/Classroom"]}. 共${item["Total Classtime"]}课时.</li>`; //根据你的json结构修改
+                        });
+                        output += '</ul>';
+                        container.innerHTML = output;
+                    })
+                    .catch(error => {
+                        console.error('Error fetching JSON:', error);
+                        const container = document.getElementById('course-container');
+                        container.innerHTML = "加载数据出错";
+                    });
+                </script>
+            </ol>
+            </section>
+            <section id="teachingAwards">
+            <h3>奖项</h3>
+            <p class="note">
+                See also: 
+                <img
+                src="images/Google_Sheets_logo_(2014-2020).svg"
+                style="width: 1em; margin-inline-start: 0.5em"
+                alt="Google Sheets icon"/>
+                <a href="/teachingAwardstable">Sheet</a>. 
+                Updated: December 05, 2025.
+            </p>
+            <ol>
+                <div id="teachingAwards-container"></div>
+                <script>
+                    // 输出课程
+                    fetch('files/teachingAwardsdata.json') // 替换为你的 JSON 文件路径
+                        .then(response => {
+                        if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        return response.json(); // 将响应解析为 JSON
+                    })
+                    .then(data => {
+                        // 在这里处理 JSON 数据
+                        console.log(data); // 在控制台输出数据
+
+                        // 将数据展示在页面上（示例）
+                        const container = document.getElementById('course-container');
+                        let output = '<ul>';
+                        data.forEach(item => {
+                            if (item["Link"] === null){ // 判断是否存在Link
+                                var outCompetitionName = `${item["Competition Name"]}`;
+                            } else {
+                                var outCompetitionName = `<a href="${item["Link"]}">` + `${item["Competition Name"]}` + `</a>`;
+                            }
+
+                            // 依次输出结果
+                            output += `<li>${item["Participants"]}. ${outCompetitionName}, ${item["Class"]}. ${item["Organizer"]}, ${item["Competition Category"]}, ${item["Award Level"]}, ${item["Granting Institution"]}, ${item["Granting Institution Level"]}, ${item["Award Result"]}, ${item["Award Type"]}, ${item["Award Date"]}.</li>`; //根据你的json结构修改
                         });
                         output += '</ul>';
                         container.innerHTML = output;
