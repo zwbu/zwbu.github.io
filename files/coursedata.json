@@ -1,5 +1,89 @@
 [ 
   {
+    "Year/Semester": "2025-2026-1",
+    "Course": "无人机应用系统开发(微)",
+    "Course Number": "BG0600167",
+    "Course Serial Number": "202520261005100",
+    "Course Attributes": "微专业",
+    "Number of Students": "23",
+    "Class": "临班90",
+    "Teaching Week": "第19-20周",
+    "Date/Classroom": "南⑥－103[01-02-03-04-05-06-07-08]节\n南①－202(智慧教室)[01-02-03-04-05-06-07-08]节",
+    "Total Classtime": 56,
+    "Homepage Link": null
+  },
+  
+  {
+    "Year/Semester": "2025-2026-1",
+    "Course": "物理",
+    "Course Number": "G06000012",
+    "Course Serial Number": "202520261002139",
+    "Course Attributes": "必修",
+    "Number of Students": "31",
+    "Class": "24汽试(中外)",
+    "Teaching Week": "第2-13周",
+    "Date/Classroom": "周一南①－303[05-06]节\n周四南①－304[01-02]节",
+    "Total Classtime": 48,
+    "Homepage Link": null
+  },
+  
+  {
+    "Year/Semester": "2025-2026-1",
+    "Course": "微机技术",
+    "Course Number": "G06000020",
+    "Course Serial Number": "202520261002129",
+    "Course Attributes": "必修",
+    "Number of Students": "37",
+    "Class": "23汽车制造与试验技术(中外合作办学)",
+    "Teaching Week": "第2-13周",
+    "Date/Classroom": "周一南①－307[03-04]节\n周三南①－307[07-08]节",
+    "Total Classtime": 48,
+    "Homepage Link": null
+  },
+  
+  {
+    "Year/Semester": "2025-2026-1",
+    "Course": "单片机技术课程设计",
+    "Course Number": "BG0600032",
+    "Course Serial Number": "202520261002504",
+    "Course Attributes": "必修",
+    "Number of Students": "108",
+    "Class": "23机器人工程(本科)(1)班,23机器人工程(本科)(2)班,23机器人工程(本科)(创新)",
+    "Teaching Week": "第14-15周",
+    "Date/Classroom": "周一南⑥－306[01-02-03-04-05-06-07-08]节",
+    "Total Classtime": 16,
+    "Homepage Link": null
+  },
+  
+  {
+    "Year/Semester": "2025-2026-1",
+    "Course": "专业认知实习",
+    "Course Number": "BG0100123",
+    "Course Serial Number": "202520261003950",
+    "Course Attributes": "必修",
+    "Number of Students": "40",
+    "Class": "25机器人(本科)(3)",
+    "Teaching Week": "第12周",
+    "Date/Classroom": "N/A",
+    "Total Classtime": 8,
+    "Homepage Link": null
+  },
+
+  {
+    "Year/Semester": "2025-2026-1",
+    "Course": "智能机器人控制综合课程设计",
+    "Course Number": "BG0600141",
+    "Course Serial Number": "202520261002558",
+    "Course Attributes": "专选",
+    "Number of Students": "53",
+    "Class": "22机器人工程(本科)(1)班,22机器人工程(本科)(2)班,22机器人工程(本科)(创新)",
+    "Teaching Week": "第10-12周",
+    "Date/Classroom": "周三南⑥－207[01-02-03-04-05-06-07-08]节\n周五南⑥－207[01-02-03-04-05-06-07-08]节",
+    "Total Classtime": ,
+    "Homepage Link": null
+  },
+      
+  {
     "Year/Semester": "2024-2025-2",
     "Course": "航空动力学原理与航模制作(微)",
     "Course Number": "BG0600168",
