@@ -226,7 +226,7 @@
                             }
 
                             // 依次输出结果
-                            output += `<li>${item["Year/Semester"]}: ${Course}, ${Class}. ${item["Teaching Week"]} - ${item["Date/Classroom"]}$. 共{item["Total Classtime"]}课时.</li>`; //根据你的json结构修改
+                            output += `<li>${item["Year/Semester"]}: ${item["Course"]}, ${item["Class"]}. ${item["Teaching Week"]} - ${item["Date/Classroom"]}$. 共{item["Total Classtime"]}课时.</li>`; //根据你的json结构修改
                         });
                         output += '</ul>';
                         container.innerHTML = output;
