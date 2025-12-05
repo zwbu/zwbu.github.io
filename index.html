@@ -283,7 +283,7 @@
                             }
 
                             // 依次输出结果
-                            output += `<li>${item["Participants"]}. ${outCompetitionName}, ${item["Class"]}. ${item["Organizer"]}, ${item["Competition Category"]}, ${item["Award Level"]}, ${item["Granting Institution"]}, ${item["Granting Institution Level"]}, ${item["Award Result"]}, ${item["Award Type"]}, ${item["Award Date"]}.</li>`; //根据你的json结构修改
+                            output += `<li>${item["Participants"]}. ${outCompetitionName}. ${item["Organizer"]}, ${item["Competition Category"]}, ${item["Award Level"]}, ${item["Granting Institution"]}, ${item["Granting Institution Level"]}, ${item["Award Result"]}, ${item["Award Type"]}, ${item["Award Date"]}.</li>`; //根据你的json结构修改
                         });
                         output += '</ul>';
                         container.innerHTML = output;
