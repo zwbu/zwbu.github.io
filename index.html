@@ -329,6 +329,7 @@
                         // 将数据展示在页面上（示例）
                         const container = document.getElementById('project-container');
                         let output = '<ul>';
+                        data.forEach(item => {
                             // 依次输出结果
                             output += `<li>${Department} , ${Project}, ${Number}, ${Name}, ${Name}, ${StartDate}至${EndDate}, ${Funding}, ${Status}, ${Role}.</li>`; //根据你的json结构修改
                         });
