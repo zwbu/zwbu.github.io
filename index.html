@@ -308,14 +308,14 @@
                 src="images/Google_Sheets_logo_(2014-2020).svg"
                 style="width: 1em; margin-inline-start: 0.5em"
                 alt="Google Sheets icon"/>
-                <a href="/patenttable">Sheet</a>. 
+                <a href="/projecttable">Sheet</a>. 
                 Updated: June 20, 2026.
             </p>
             <ol>
-                <div id="patent-container"></div>
+                <div id="project-container"></div>
                 <script>
                     // 输出项目
-                    fetch('files/patentdata.json') // 替换为你的 JSON 文件路径
+                    fetch('files/projectdata.json') // 替换为你的 JSON 文件路径
                         .then(response => {
                         if (!response.ok) {
                         throw new Error(`HTTP error! status: ${response.status}`);
@@ -327,7 +327,7 @@
                         console.log(data); // 在控制台输出数据
 
                         // 将数据展示在页面上（示例）
-                        const container = document.getElementById('patent-container');
+                        const container = document.getElementById('project-container');
                         let output = '<ul>';
                             // 依次输出结果
                             output += `<li>${Department} , ${Project}, ${Number}, ${Name}, ${Name}, ${StartDate}至${EndDate}, ${Funding}, ${Status}, ${Role}.</li>`; //根据你的json结构修改
@@ -337,7 +337,7 @@
                     })
                     .catch(error => {
                         console.error('Error fetching JSON:', error);
-                        const container = document.getElementById('patent-container');
+                        const container = document.getElementById('project-container');
                         container.innerHTML = "加载数据出错";
                     });
                 </script>
