@@ -299,6 +299,49 @@
         </section>
         <section id="research" class="bsection">
             <h2>&sect; 科研</h2>
+            </section>
+            <section id="project">
+            <h3>项目</h3>
+            <p class="note">
+                See also: 
+                <img
+                src="images/Google_Sheets_logo_(2014-2020).svg"
+                style="width: 1em; margin-inline-start: 0.5em"
+                alt="Google Sheets icon"/>
+                <a href="/patenttable">Sheet</a>. 
+                Updated: June 20, 2026.
+            </p>
+            <ol>
+                <div id="patent-container"></div>
+                <script>
+                    // 输出项目
+                    fetch('files/patentdata.json') // 替换为你的 JSON 文件路径
+                        .then(response => {
+                        if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        return response.json(); // 将响应解析为 JSON
+                    })
+                    .then(data => {
+                        // 在这里处理 JSON 数据
+                        console.log(data); // 在控制台输出数据
+
+                        // 将数据展示在页面上（示例）
+                        const container = document.getElementById('patent-container');
+                        let output = '<ul>';
+                            // 依次输出结果
+                            output += `<li>${Department} , ${Project}, ${Number}, ${Name}, ${Name}, ${StartDate}至${EndDate}, ${Funding}, ${Status}, ${Role}.</li>`; //根据你的json结构修改
+                        });
+                        output += '</ul>';
+                        container.innerHTML = output;
+                    })
+                    .catch(error => {
+                        console.error('Error fetching JSON:', error);
+                        const container = document.getElementById('patent-container');
+                        container.innerHTML = "加载数据出错";
+                    });
+                </script>
+            </ol>            
             <section id="paper">
             <h3>论文</h3>
             <p class="note">
